@@ -23,7 +23,7 @@
           <a class="nav-link" href="nbateams.php">NBA Teams</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="players.php">Players</a>
+          <a class="nav-link" href="locations.php">Team Locations</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="rosters.php">2023-2024 Rosters</a>
