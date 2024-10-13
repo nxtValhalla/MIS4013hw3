@@ -8,6 +8,7 @@
       <th>Wins</th>
       <th>Losses</th>
       <th>Location ID</th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@ while ($nbateam = $nbateams->fetch_assoc()){
     <td><?php echo $nbateam['Wins']; ?></td>
     <td><?php echo $nbateam['Losses']; ?></td>
     <td><?php echo $nbateam['LocationID']; ?></td>
+    <td><a href="roster-by-team.php?=<?php echo $nbateam['TeamID']; ?>">Roster</a></td>
   </tr>
 <?php
 }
