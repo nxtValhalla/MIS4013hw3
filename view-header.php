@@ -20,16 +20,13 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="post.php">Post</a>
+          <a class="nav-link" href="nbateams.php">NBA Teams</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="post-result.php">Post Result</a>
+          <a class="nav-link" href="players.php">Players</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="get.php">Get</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="get-result.php">Get Result</a>
+          <a class="nav-link" href="rosters.php">2023-2024 Rosters</a>
         </li>
       </ul>
     </div>
