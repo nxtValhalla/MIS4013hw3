@@ -1,8 +1,8 @@
 <h1>NBA Players With Stats - Northwest Division</h1>
 <div class="card-group">
 <?php
-if ($playerswithstats->num_rows > 0) {
-    while ($player = $playerswithstats->fetch_assoc()) {
+if ($players->num_rows > 0) {
+    while ($player = $players->fetch_assoc()) {
 ?>
   <div class="card">
     <div class="card-body">
