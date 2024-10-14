@@ -18,8 +18,8 @@ while ($location = $locations->fetch_assoc()){
     <td><?php echo $location['City']; ?></td>
     <td><?php echo $location['State']; ?></td>
     <td>
-      <form method="post" action="address-by-location.php">
-        <input type="hidden" name="Locid" value="<?php echo $address['LocationID']; ?>">
+      <form method="POST" action="address-by-location.php">
+        <input type="hidden" name="lid" value="<?php echo $address['LocationID']; ?>">
         <button type="submit" class="btn btn-primary">Arena Address</button>
       </form>
     </td>
