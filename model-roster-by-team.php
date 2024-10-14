@@ -14,16 +14,3 @@ function selectRosterByTeam($TeamID) {
     }
 }
 ?>
-<?php
-// Get the team ID from the URL (or form)
-$team_id = isset($_GET['TeamID']) ? $_GET['TeamID'] : 1; // Default to 1 if not set
-
-// Query the team name
-$team_sql = "SELECT TeamName FROM nbarosters.nba_northwest_division WHERE TeamID = ?";
-$stmt = $conn->prepare($team_sql);
-$stmt->bind_param("i", $team_id);
-$stmt->execute();
-$stmt->bind_result($team_name);
-$stmt->fetch();
-$stmt->close();
-?>
