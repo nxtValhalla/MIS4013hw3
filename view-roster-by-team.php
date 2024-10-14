@@ -1,4 +1,4 @@
-<h1>Team Roster</h1>
+<h1><?php echo htmlspecialchars($team_name); ?> - Team Roster</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
