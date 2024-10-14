@@ -16,7 +16,7 @@ function selectPlayers() {
 function selectStatsByPlayer($pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT p.PlayerID, PlayerName, GamesPlayed, PPG, APG, RPG FROM nbarosters.nba_northwest_players p join nbarosters.nba_players_stats s on p.PlayerID = s.PlayerID WHERE d.TeamID = ?");
+        $stmt = $conn->prepare("SELECT p.PlayerID, PlayerName, GamesPlayed, PPG, APG, RPG FROM nbarosters.nba_northwest_players p join nbarosters.nba_player_stats s on p.PlayerID = s.PlayerID WHERE p.PlayerID = ?");
         $stmt->bind_param("i", $pid);
         $stmt->execute();
         $result = $stmt->get_result();
