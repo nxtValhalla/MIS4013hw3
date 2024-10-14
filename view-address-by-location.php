@@ -16,11 +16,11 @@
 while ($address = $addressbylocation->fetch_assoc()){
 ?>
   <tr>
-    <td><?php echo $address['l.ArenaID']; ?></td>
+    <td><?php echo $address['ArenaID']; ?></td>
     <td><?php echo $address['ArenaName']; ?></td>
     <td><?php echo $address['Address']; ?></td>
-    <td><?php echo $address['a.City']; ?></td>
-    <td><?php echo $address['a.State']; ?></td>
+    <td><?php echo $address['City']; ?></td>
+    <td><?php echo $address['State']; ?></td>
     <td><?php echo $address['ZipCode']; ?></td>
   </tr>
 <?php
