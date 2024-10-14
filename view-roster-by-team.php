@@ -1,4 +1,7 @@
-<h1>Team Roster</h1>
+<?php
+while ($rosterbyteam = $rosterbyteams->fetch_assoc()){
+?>
+<h1><?php echo $rosterbyteam['TeamName']; ?> - Team Roster</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -9,9 +12,6 @@
       </tr>
     </thead>
     <tbody>
-<?php
-while ($rosterbyteam = $rosterbyteams->fetch_assoc()){
-?>
   <tr>
     <td><?php echo $rosterbyteam['PlayerID']; ?></td>
     <td><?php echo $rosterbyteam['PlayerName']; ?></td>
