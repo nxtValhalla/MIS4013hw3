@@ -10,7 +10,6 @@ if ($players->num_rows > 0) {
       <p class="card-text">
       <ul class="list-group">
 <?php
-  $statsbyplayer = selectStatsByPlayer($player['PlayerID']);
   if ($statsbyplayer->num_rows > 0) {
       while ($playerstats = $statsbyplayer->fetch_assoc()) {
 ?>
