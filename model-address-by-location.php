@@ -6,17 +6,17 @@ function selectAddressByLocation($lid) {
         $stmt->bind_param("i", $lid);
         $stmt->execute();
         $result = $stmt->get_result();
-        // Debugging: Check if there are any errors
-        if (!$result) {
-            echo "Query error: " . $stmt->error;
-        }
+        // // Debugging: Check if there are any errors
+        // if (!$result) {
+        //     echo "Query error: " . $stmt->error;
+        // }
         
-        // Debugging: Print number of rows returned
-        if ($result->num_rows === 0) {
-            echo "No results found for Location ID: " . $lid;
-        } else {
-            echo "Results found: " . $result->num_rows;
-        }
+        // // Debugging: Print number of rows returned
+        // if ($result->num_rows === 0) {
+        //     echo "No results found for Location ID: " . $lid;
+        // } else {
+        //     echo "Results found: " . $result->num_rows;
+        // }
         
         $conn->close();
         return $result;
