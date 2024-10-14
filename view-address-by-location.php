@@ -22,12 +22,6 @@ while ($address = $addresses->fetch_assoc()){
     <td><?php echo $address['City']; ?></td>
     <td><?php echo $address['State']; ?></td>
     <td><?php echo $address['ZipCode']; ?></td>
-    <td>
-      <form method="post" action="address-by-location.php">
-        <input type="hidden" name="Locid" value="<?php echo $address['ArenaID']; ?>">
-        <button type="submit" class="btn btn-primary">Arena Address</button>
-      </form>
-    </td>
   </tr>
 <?php
 }
