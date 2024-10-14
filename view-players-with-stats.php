@@ -10,7 +10,7 @@ while ($player = $playerswithstats->fetch_assoc()){
       <ul class="list-group">
 <?php
   $stats = selectStatsByPlayer($player['PlayerID']);
-  while ($playerstat = $playerstats->fetch_assoc()) {
+  while ($playerstat = $stats->fetch_assoc()) {
 ?>
     <li class="list-group-item">Games Played: <?php echo $playerstat['GamesPlayed']; ?></li>
     <li class="list-group-item">PPG: <?php echo $playerstat['PPG']; ?></li>
