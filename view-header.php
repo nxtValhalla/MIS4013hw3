@@ -26,7 +26,7 @@
           <a class="nav-link" href="locations.php">Team Locations</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="player-stats.php">2023-2024 Player Stats</a>
+          <a class="nav-link" href="players-with-stats.php">2023-2024 Player Stats</a>
         </li>
       </ul>
     </div>
