@@ -21,6 +21,7 @@ if ($players->num_rows > 0) {
       }
   } else {
       echo "<li class='list-group-item'>No stats available for this player</li>";
+      break;
   }
 ?>
       </ul>
