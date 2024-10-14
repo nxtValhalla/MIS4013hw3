@@ -12,14 +12,14 @@
     </thead>
     <tbody>
 <?php
-while ($playerstats = $nbaplayerstats->fetch_assoc()){
+while ($playerstat = $playerstats->fetch_assoc()){
 ?>
   <tr>
-    <td><?php echo $playerstats['PlayerID']; ?></td>
-    <td><?php echo $playerstats['GamesPlayed']; ?></td>
-    <td><?php echo $playerstats['PPG']; ?></td>
-    <td><?php echo $playerstats['APG']; ?></td>
-    <td><?php echo $playerstats['RPG']; ?></td>
+    <td><?php echo $playerstat['PlayerID']; ?></td>
+    <td><?php echo $playerstat['GamesPlayed']; ?></td>
+    <td><?php echo $playerstat['PPG']; ?></td>
+    <td><?php echo $playerstat['APG']; ?></td>
+    <td><?php echo $playerstat['RPG']; ?></td>
   </tr>
 <?php
 }
