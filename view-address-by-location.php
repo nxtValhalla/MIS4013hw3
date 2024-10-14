@@ -1,4 +1,4 @@
-<h1>Team Arena Name and Address</h1>
+<h1>Arena Name and Address</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
