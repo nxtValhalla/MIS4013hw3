@@ -13,7 +13,7 @@
     </thead>
     <tbody>
 <?php
-while ($address = $addresses->fetch_assoc()){
+while ($address = $addressbylocation->fetch_assoc()){
 ?>
   <tr>
     <td><?php echo $address['ArenaID']; ?></td>
