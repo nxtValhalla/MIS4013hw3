@@ -1,9 +1,9 @@
 <?php
-function selectAddressByLocation($Locid) {
+function selectAddressByLocation($lid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT l.ArenaID, ArenaName, Address, a.City, a.State, ZipCode FROM nbarosters.nba_team_locations l join nbarosters.nba_arena_addresses a on l.ArenaID = a.ArenaID WHERE l.LocationID = ?");
-        $stmt->bind_param("i", $Locid);
+        $stmt->bind_param("i", $lid);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
