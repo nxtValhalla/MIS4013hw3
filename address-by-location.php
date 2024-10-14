@@ -10,7 +10,7 @@ include "view-header.php";
 //     $lid = $_POST['lid'];
 //     echo "Location ID: " . $lid; // Debugging line to verify POST data
 
-//     $addressbylocation = selectAddressByLocation($_POST['lid']);
+$addressbylocation = selectAddressByLocation($_POST['lid']);
 
 //     if ($addressbylocation->num_rows > 0) {
 //         include "view-address-by-location.php";
