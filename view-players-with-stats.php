@@ -1,7 +1,8 @@
 <h1>NBA Players With Stats - Northwest Division</h1>
 <div class="card-group">
 <?php
-while ($player = $playerswithstats->fetch_assoc()){
+if ($playerswithstats->num_rows > 0) {
+    while ($player = $playerswithstats->fetch_assoc()) {
 ?>
   <div class="card">
     <div class="card-body">
@@ -10,13 +11,17 @@ while ($player = $playerswithstats->fetch_assoc()){
       <ul class="list-group">
 <?php
   $stats = selectStatsByPlayer($player['PlayerID']);
-  while ($playerstat = $stats->fetch_assoc()) {
+  if ($stats->num_rows > 0) {
+      while ($playerstat = $stats->fetch_assoc()) {
 ?>
-    <li class="list-group-item">Games Played: <?php echo $playerstat['GamesPlayed']; ?></li>
-    <li class="list-group-item">PPG: <?php echo $playerstat['PPG']; ?></li>
-    <li class="list-group-item">APG: <?php echo $playerstat['APG']; ?></li>
-    <li class="list-group-item">RPG: <?php echo $playerstat['RPG']; ?></li>
+        <li class="list-group-item">Games Played: <?php echo $playerstat['GamesPlayed']; ?></li>
+        <li class="list-group-item">PPG: <?php echo $playerstat['PPG']; ?></li>
+        <li class="list-group-item">APG: <?php echo $playerstat['APG']; ?></li>
+        <li class="list-group-item">RPG: <?php echo $playerstat['RPG']; ?></li>
 <?php
+      }
+  } else {
+      echo "<li class='list-group-item'>No stats available for this player</li>";
   }
 ?>
       </ul>
@@ -25,6 +30,10 @@ while ($player = $playerswithstats->fetch_assoc()){
     </div>
   </div>
 <?php
+    }
+} else {
+    echo "No players found.";
 }
 ?>
 </div>
+
