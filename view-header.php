@@ -29,7 +29,7 @@
           <a class="nav-link" href="stats-by-player.php">Test Tab</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="players-with-stats.php?pid=<?php echo $players['PlayerID']; ?>">2023-2024 Player Stats</a>
+          <a class="nav-link" href="players-with-stats.php?pid=<?php echo $player['PlayerID']; ?>">2023-2024 Player Stats</a>
         </li>
       </ul>
     </div>
