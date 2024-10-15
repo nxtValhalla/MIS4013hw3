@@ -19,7 +19,7 @@ while ($player = $players->fetch_assoc()){
     <td><?php echo $player['PlayerName']; ?></td>
     <td><?php echo $player['PlayerPosition']; ?></td>
     <td><?php echo $player['TeamID']; ?></td>
-    <td><a href="stats-by-player.php?id=<?php echo $player['PlayerID']; ?>"></a>Pass Player ID</td>
+    <td><a href="stats-by-player.php?pid=<?php echo $player['PlayerID']; ?>">Pass Player ID</a></td>
   </tr>
 <?php
 }
