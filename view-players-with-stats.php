@@ -8,23 +8,23 @@ if ($players->num_rows > 0) {
     <div class="card-body">
       <h5 class="card-title"><?php echo $player['PlayerName']; ?></h5>
       <p class="card-text">
-      <ul class="list-group">
+<!--       <ul class="list-group">
 <?php
-      if ($playerstats->num_rows > 0) {
-        while ($playerstat = $playerstats->fetch_assoc()) {
+      // if ($playerstats->num_rows > 0) {
+      //   while ($playerstat = $playerstats->fetch_assoc()) {
 ?>
           <li class="list-group-item">Games Played: <?php echo $playerstat['GamesPlayed']; ?></li>
           <li class="list-group-item">PPG: <?php echo $playerstat['PPG']; ?></li>
           <li class="list-group-item">APG: <?php echo $playerstat['APG']; ?></li>
           <li class="list-group-item">RPG: <?php echo $playerstat['RPG']; ?></li>
 <?php
-        }
-  }   else {
-          echo "<li class='list-group-item'>No stats available for this player</li>";
-          break;
-      }
+  //       }
+  // }   else {
+  //         echo "<li class='list-group-item'>No stats available for this player</li>";
+  //         break;
+  //     }
 ?>
-      </ul>
+      </ul> -->
       </p>
       <p class="card-text"><small class="text-body-secondary">Position: <?php echo $player['PlayerPosition']; ?></small></p>
     </div>
