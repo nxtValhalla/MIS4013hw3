@@ -1,4 +1,4 @@
-<h1>NBA Players with Statistics- Northwest Division</h1>
+<h1>NBA Players with Statistics - Northwest Division</h1>
 <div class="container">
 <?php
 while ($player = $players->fetch_assoc()){
