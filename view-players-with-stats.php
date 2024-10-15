@@ -11,14 +11,14 @@ if ($players->num_rows > 0) {
       <ul class="list-group">
 <?php
       if ($playerstats->num_rows > 0) {
-          while ($playerstat = $playerstats->fetch_assoc()) {
+        while ($playerstat = $playerstats->fetch_assoc()) {
 ?>
-            <li class="list-group-item">Games Played: <?php echo $playerstat['GamesPlayed']; ?></li>
-            <li class="list-group-item">PPG: <?php echo $playerstat['PPG']; ?></li>
-            <li class="list-group-item">APG: <?php echo $playerstat['APG']; ?></li>
-            <li class="list-group-item">RPG: <?php echo $playerstat['RPG']; ?></li>
+          <li class="list-group-item">Games Played: <?php echo $playerstat['GamesPlayed']; ?></li>
+          <li class="list-group-item">PPG: <?php echo $playerstat['PPG']; ?></li>
+          <li class="list-group-item">APG: <?php echo $playerstat['APG']; ?></li>
+          <li class="list-group-item">RPG: <?php echo $playerstat['RPG']; ?></li>
 <?php
-      }
+        }
   }   else {
           echo "<li class='list-group-item'>No stats available for this player</li>";
           break;
