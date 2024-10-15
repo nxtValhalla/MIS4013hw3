@@ -7,7 +7,7 @@ if ($players->num_rows > 0) {
     <div class="row mb-4">
       <div class="card w-100">
         <div class="card-body">
-          <h5 class="card-title"><?php echo $player['PlayerName']; ?></h5>
+          <h5 class="card-title">Player ID: <?php echo $player['PlayerID']; ?> Name: <?php echo $player['PlayerName']; ?></h5>
           <p class="card-text">
 <!--           <ul class="list-group">
 <?php
