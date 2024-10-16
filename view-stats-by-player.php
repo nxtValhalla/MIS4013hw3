@@ -6,10 +6,8 @@
       <th>Player ID</th>
       <th>Player Name</th>
       <th>Position</th>
-      <th>Games Played</th>
-      <th>Points</th>
-      <th>Assists</th>
-      <th>Rebounds</th>
+      <th>Stat Name</th>
+      <th>Stat Value</th>
       </tr>
     </thead>
     <tbody>
@@ -20,10 +18,8 @@ while ($stats = $statsbyplayer->fetch_assoc()){
     <td><?php echo $stats['PlayerID']; ?></td>
     <td><?php echo $stats['PlayerName']; ?></td>
     <td><?php echo $stats['PlayerPosition']; ?></td>
-    <td><?php echo $stats['GamesPlayed']; ?></td>
-    <td><?php echo $stats['PPG']; ?></td>
-    <td><?php echo $stats['APG']; ?></td>
-    <td><?php echo $stats['RPG']; ?></td>
+    <td><?php echo $stats['StatName']; ?></td>
+    <td><?php echo $stats['StatValue']; ?></td>
   </tr>
 <?php
 }
