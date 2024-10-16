@@ -2,7 +2,7 @@
 function selectPlayerStats() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT PlayerID, GamesPlayed, PPG, APG, RPG FROM nbarosters.nba_player_stats;");
+        $stmt = $conn->prepare("SELECT PlayerID, StatName, StatValue FROM nbarosters.nba_northwest_player_stats;");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
