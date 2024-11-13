@@ -36,7 +36,7 @@ while ($nbateam = $nbateams->fetch_assoc()){
     <td></td>
     <td>
       <form method="post" action="">
-        <input type="hidden" name="ID" value="<?php echo $nbateam['TeamID'];?>">
+        <input type="hidden" name="teamid" value="<?php echo $nbateam['TeamID'];?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-danger">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
