@@ -19,8 +19,8 @@ include "view-nbateams-addform.php";
       <th>Losses</th>
       <th>Location ID</th>
       <th></th>
-      <th></th>
-      <th></th>
+      <th>Edit</th>
+      <th>Delete</th>
       </tr>
     </thead>
     <tbody>
