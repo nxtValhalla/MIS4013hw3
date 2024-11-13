@@ -28,34 +28,6 @@ function selectStatsByPlayer($PlayerID) {
     }
 }
 
-function selectPlayersForInput() {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT PlayerID, PlayerName FROM nbarosters.nba_northwest_players ORDER BY PlayerName;");
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
-function selectStatsForInput() {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT PlayerID, PlayerName FROM nbarosters.nba_northwest_players ORDER BY PlayerName;");
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
 function insertStatsByPlayer($playerID, $statName, $statValue) {
     try {
         $conn = get_db_connection();
