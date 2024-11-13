@@ -5,7 +5,7 @@
   <div class="col-auto" style="display: flex; flex-direction: row; align-items: center;">
     <h2>Add New Team</h2>
 <?php
-include "view-nbateams-newform.php";
+include "view-nbateams-addform.php";
 ?>
   </div>
 </div>
@@ -33,7 +33,11 @@ while ($nbateam = $nbateams->fetch_assoc()){
     <td><?php echo $nbateam['Wins']; ?></td>
     <td><?php echo $nbateam['Losses']; ?></td>
     <td><?php echo $nbateam['LocationID']; ?></td>
-    <td></td>
+    <td>
+      <?php
+      include "view-nbateams-editform.php";
+      ?>
+    </td>
     <td>
       <form method="post" action="">
         <input type="hidden" name="teamid" value="<?php echo $nbateam['TeamID'];?>">
