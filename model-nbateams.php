@@ -28,7 +28,7 @@ function insertNBATeam($teamName, $wins, $losses, $locID) {
 function updateNBATeam($teamName, $wins, $losses, $locID, $teamid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE nbarosters.nba_northwest_division set TeamName = ?, Wins = ?, Losses = ?, LocationID = ? WHERE TeamID = ?)");
+        $stmt = $conn->prepare("UPDATE nbarosters.nba_northwest_division set TeamName = ?, Wins = ?, Losses = ?, LocationID = ? WHERE TeamID = ?");
         $stmt->bind_param("siisi", $teamName, $wins, $losses, $locID, $teamid);
         $success = $stmt->execute();
         $conn->close();
