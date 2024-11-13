@@ -1,4 +1,14 @@
+<div class="row">
+  <div class="col">
 <h1>NBA Players with Statistics - Northwest Division</h1>
+  </div>
+  <div class="col-auto" style="display: flex; flex-direction: row; align-items: center;">
+<?php
+include "view-players-with-stats-addform.php";
+?>
+<h2>Add a New Team</h2>
+  </div>
+</div>
 <div class="container">
 <?php
 while ($player = $players->fetch_assoc()){
