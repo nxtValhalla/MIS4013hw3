@@ -5,7 +5,7 @@
   <div class="col-auto" style="display: flex; flex-direction: row; align-items: center;">
     <h2>Add New Team</h2>
 <?php
-include "view-nbateams-addform.php";
+include "view-nbateams-newform.php";
 ?>
   </div>
 </div>
