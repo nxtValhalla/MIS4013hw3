@@ -28,43 +28,5 @@ function selectStatsByPlayer($PlayerID) {
     }
 }
 
-function insertStatsByPlayer($statName, $statValue, $playerID) {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO nbarosters.nba_northwest_player_stats (StatName, StatValue) VALUES (?, ?) WHERE PlayerID = ?");
-        $stmt->bind_param("sdi", $statName, $statValue, $playerID);
-        $success = $stmt->execute();
-        $conn->close();
-        return $success;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-function updateStatsByPlayer($statName, $statValue, $playerID, $statInputID) {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE nbarosters.nba_northwest_player_stats set StatName = ?, StatValue = ? WHERE PlayerID = ? AND StatInputID = ?");
-        $stmt->bind_param("sdii", $statName, $statValue, $playerID, $statInputID);
-        $success = $stmt->execute();
-        $conn->close();
-        return $success;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-function deleteStatsByPlayer($statInputID) {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE FROM nbarosters.nba_northwest_player_stats WHERE StatInputID = ?");
-        $stmt->bind_param("i", $statInputID);
-        $success = $stmt->execute();
-        $conn->close();
-        return $success;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
+
 ?>
