@@ -26,7 +26,7 @@ while ($player = $players->fetch_assoc()){
   while ($statvar = $statvars->fetch_assoc()) {
 ?>     
     <li class="list-group-item"><?php echo $statvar['StatName']; ?>: <?php echo $statvar['StatValue']; ?></li>
-    <li></li>
+    <li><?phpinclude "view-players-with-stats-editform.php";?></li>
     <li></li>
 <?php
   }
