@@ -1,4 +1,14 @@
+<div class="row">
+  <div class="col">
 <h1>Locations - Northwest Division</h1>
+  </div>
+  <div class="col-auto" style="display: flex; flex-direction: row; align-items: center;">
+<?php
+include "view-locations-addform.php";
+?>
+<h2>Add a New Location</h2>
+  </div>
+</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
