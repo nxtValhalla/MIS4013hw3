@@ -3,6 +3,7 @@
 <h1>NBA Teams - Northwest Division</h1>
   </div>
   <div class="col-auto">
+    <h2>Add New Team</h2>
 <?php
 include "view-nbateams-addform.php";
 ?>
