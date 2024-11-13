@@ -1,4 +1,4 @@
-<h1>2023-2024 Statistics For <?php echo $stats['PlayerName']; ?></h1>
+<h1>2023-2024 Statistics</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
