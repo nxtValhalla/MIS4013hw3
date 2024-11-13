@@ -32,6 +32,7 @@
             <label for="locID" class="form-label">Location ID</label>
             <input type="text" class="form-control" id="locID" name="locID">
           </div>
+            <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Add</button>
         </form>
       </div>
