@@ -28,11 +28,11 @@ function selectStatsByPlayer($PlayerID) {
     }
 }
 
-function insertStatsByPlayer($playerID, $statName, $statValue) {
+function insertStatsByPlayer($statName, $statValue, $playerID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO nbarosters.nba_northwest_player_stats (PlayerID, StatName, StatValue) VALUES (?, ?, ?)");
-        $stmt->bind_param("isd", $playerID, $statName, $statValue);
+        $stmt = $conn->prepare("INSERT INTO nbarosters.nba_northwest_player_stats (StatName, StatValue) VALUES (?, ?) WHERE PlayerID = ?");
+        $stmt->bind_param("sdi", $statName, $statValue, $playerID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
