@@ -6,7 +6,7 @@
 <?php
 include "view-nbateams-addform.php";
 ?>
-<h2>Add New Team</h2>
+<h2>Add a New Team</h2>
   </div>
 </div>
 <div class="table-responsive">
