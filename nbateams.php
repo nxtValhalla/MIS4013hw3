@@ -14,6 +14,13 @@ if (isset($_POST['actionType'])) {
         echo '<div class="alert alert-danger" role="alert">Error. No Team Added.</div>';
       }
       break;
+    case "Delete":
+      if (deleteNBATeam($_POST['teamid'])) {
+        echo '<div class="alert alert-success" role="alert">NBA Team Deleted Successfully!</div>';   
+      } else {
+        echo '<div class="alert alert-danger" role="alert">Error. No Team Removed.</div>';
+      }
+      break;
   }
 }
 
