@@ -15,21 +15,24 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="post" action="">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <label for="teamName" class="form-label">Team Name</label>
+            <input type="text" class="form-control" id="teamName" name="teamName">
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="wins" class="form-label">Wins</label>
+            <input type="text" class="form-control" id="wins" name="wins">
           </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          <div class="mb-3">
+            <label for="losses" class="form-label">Losses</label>
+            <input type="text" class="form-control" id="losses" name="losses">
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="mb-3">
+            <label for="locID" class="form-label">Location ID</label>
+            <input type="text" class="form-control" id="locID" name="locID">
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
         </form>
       </div>
     </div>
