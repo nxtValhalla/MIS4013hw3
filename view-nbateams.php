@@ -1,4 +1,13 @@
+<div class="row">
+  <div class="col">
 <h1>NBA Teams - Northwest Division</h1>
+  </div>
+  <div class="col-auto">
+<?php
+include "view-nbateams-addform.php";
+?>
+  </div>
+</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
