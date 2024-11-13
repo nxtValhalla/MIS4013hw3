@@ -1,4 +1,4 @@
-<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="row">
   <div class="col">
 <h1>NBA Teams - Northwest Division</h1>
   </div>
