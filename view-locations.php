@@ -17,6 +17,8 @@ include "view-locations-addform.php";
       <th>City</th>
       <th>State</th>
       <th></th>
+      <th>Edit</th>
+      <th>Delete</th>
       </tr>
     </thead>
     <tbody>
