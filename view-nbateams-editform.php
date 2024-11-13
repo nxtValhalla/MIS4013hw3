@@ -34,7 +34,7 @@
           </div>
             <input type="hidden" name="teamid" value="<?php echo $nbateam['TeamID'];?>">
             <input type="hidden" name="actionType" value="Edit">
-          <button type="submit" class="btn btn-primary">Add</button>
+          <button type="submit" class="btn btn-primary">Edit</button>
         </form>
       </div>
     </div>
