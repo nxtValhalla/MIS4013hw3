@@ -30,7 +30,7 @@
           </div>
             <input type="hidden" name="locID" value="<?php echo $location['LocationID'];?>">
             <input type="hidden" name="actionType" value="Edit">
-          <button type="submit" class="btn btn-primary">Edit</button>
+          <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
     </div>
