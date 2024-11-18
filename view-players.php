@@ -7,7 +7,7 @@
       <th>Player Name</th>
       <th>Position</th>
       <th>Team ID</th>
-      <th></th>
+      <th>Player Stats</th>
       </tr>
     </thead>
     <tbody>
