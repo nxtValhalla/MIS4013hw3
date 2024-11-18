@@ -26,7 +26,7 @@
           </div>
           <div class="mb-3">
             <label for="arenaID<?php echo $location['LocationID'];?>" class="form-label">ArenaID</label>
-            <input type="text" class="form-control" id="arenaID<?php echo $location['LocationID'];?>" name="arenaID" value="<?php echo $address['ArenaID']; ?>">
+            <input type="text" class="form-control" id="arenaID<?php echo $location['LocationID'];?>" name="arenaID" value="<?php echo $location['ArenaID']; ?>">
           </div>
             <input type="hidden" name="locID" value="<?php echo $location['LocationID'];?>">
             <input type="hidden" name="actionType" value="Edit">
