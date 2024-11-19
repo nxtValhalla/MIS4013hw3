@@ -15,7 +15,7 @@ include "view-locations-addform.php";
       <tr>
       <th>Location ID</th>
       <th>City</th>
-      <th>State</th>
+      <th>State/Province</th>
       <th></th>
       <th>Edit</th>
       <th>Delete</th>
