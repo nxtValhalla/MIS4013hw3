@@ -2,7 +2,7 @@
 require_once("util-db.php");
 require_once("model-players.php");
 
-$pageTitle = "NBA Players - Northwest Division";
+$pageTitle = "NBA Players";
 include "view-header.php";
 
 if (isset($_POST['actionType'])) {
