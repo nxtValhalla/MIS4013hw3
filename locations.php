@@ -2,7 +2,7 @@
 require_once("util-db.php");
 require_once("model-locations.php");
 
-$pageTitle = "NBA Northwest Division Team Locations";
+$pageTitle = "NBA Team Locations";
 include "view-header.php";
 
 if (isset($_POST['actionType'])) {
