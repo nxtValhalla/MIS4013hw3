@@ -25,7 +25,9 @@ while ($player = $players->fetch_assoc()){
   $statvars = selectStatsByPlayer($player['PlayerID']);
   while ($statvar = $statvars->fetch_assoc()) {
 ?>     
-    <li class="list-group-item"><?php echo $statvar['StatName']; ?>: <?php echo $statvar['StatValue']; ?></li>
+    <li class="list-group-item"><?php echo $statvar['StatName']; ?>: <?php echo $statvar['StatValue']; ?> 
+    <?phpinclude "view-players-with-stats-editform.php";?>
+    </li>
 <?php
   }
 ?>
