@@ -1,4 +1,4 @@
-<h1>Locations - Northwest Division</h1>
+<h1>NBA Team Locations</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
