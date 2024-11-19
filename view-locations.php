@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-<h1>Locations - Northwest Division</h1>
+<h1>NBA Team Locations</h1>
   </div>
   <div class="col-auto" style="display: flex; flex-direction: row; align-items: center;">
 <?php
