@@ -1,4 +1,4 @@
-<h1>NBA Teams - Northwest Division</h1>
+<h1>NBA Teams</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
