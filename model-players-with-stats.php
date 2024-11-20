@@ -44,7 +44,7 @@ function insertPlayerStat($playerid, $statname, $statvalue) {
 function updatePlayerStat($playerid, $statname, $statvalue, $statinputid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE nbarosters.nba_northwest_player_stats set PlayerID = ?, StatName = ?, StatValue = ?, WHERE StatInputID = ?");
+        $stmt = $conn->prepare("UPDATE nbarosters.nba_northwest_player_stats set PlayerID = ?, StatName = ?, StatValue = ? WHERE StatInputID = ?");
         $stmt->bind_param("isdi", $playerid, $statname, $statvalue, $statinputid);
         $success = $stmt->execute();
         $conn->close();
