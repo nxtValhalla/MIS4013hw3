@@ -28,7 +28,7 @@
             <label for="statvalue<?php echo $player['PlayerID']; ?>" class="form-label">Stat Value</label>
             <input type="text" class="form-control" id="statvalue<?php echo $player['PlayerID']; ?>" name="statvalue" value="<?php echo $statvar['StatValue'];?>">
           </div>
-            <input type="hidden" name="statinputid" value="<?php echo $player['PlayerID']; ?>">
+            <input type="hidden" name="statinputid" value="<?php echo $statvar['StatValueID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
