@@ -25,11 +25,8 @@ while ($player = $players->fetch_assoc()){
   $statvars = selectStatsByPlayer($player['PlayerID']);
   while ($statvar = $statvars->fetch_assoc()) {
 ?>     
-    <li class="list-group-item"><?php echo $statvar['StatName']; ?>: <?php echo $statvar['StatValue']; ?><?php include "view-players-with-stats-editform.php"; ?></li>
-<?php
-  }
-?>
-    <form method="post" action="">
+    <li class="list-group-item"><?php echo $statvar['StatName']; ?>: <?php echo $statvar['StatValue']; ?><?php include "view-players-with-stats-editform.php"; ?>
+      <form method="post" action="">
         <input type="hidden" name="statinputid" value="<?php echo $statvar['StatInputID'];?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-danger" onclick="return confirm('Confirm deletion of <?php echo $statvar['StatName']; ?>: <?php echo $statvar['StatValue']; ?> from <?php echo $player['PlayerName']; ?>');">
@@ -39,6 +36,10 @@ while ($player = $players->fetch_assoc()){
           </svg>
         </button>
       </form>
+    </li>
+<?php
+  }
+?>
         </ul>
         </p>
         <p class="card-text"><small class="text-body-secondary">Position: <?php echo $player['PlayerPosition']; ?></small></p>
