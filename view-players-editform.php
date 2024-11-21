@@ -26,7 +26,11 @@
           </div>
           <div class="mb-3">
             <label for="teamID<?php echo $player['PlayerID'];?>" class="form-label">Team ID</label>
-            <input type="text" class="form-control" id="teamID<?php echo $player['PlayerID'];?>" name="teamID" value="<?php echo $player['TeamID'];?>">
+<?php
+$teamList = selectTeamsForInput();
+$selectedTeam = $player['teamID'];
+include "view-team-input-list.php";
+?>
           </div>
             <input type="hidden" name="playerID" value="<?php echo $player['PlayerID'];?>">
             <input type="hidden" name="actionType" value="Edit">
