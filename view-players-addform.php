@@ -27,8 +27,8 @@
           <div class="mb-3">
             <label for="teamID" class="form-label">Team ID</label>
 <?php
-$teamsList = selectTeamsForInput();
-include "view-teams-input-list.php";
+$teamList = selectTeamsForInput();
+include "view-team-input-list.php";
 ?>
           </div>
             <input type="hidden" name="actionType" value="Add">
