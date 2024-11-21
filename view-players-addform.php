@@ -26,7 +26,10 @@
           </div>
           <div class="mb-3">
             <label for="teamID" class="form-label">Team ID</label>
-            <input type="text" class="form-control" id="teamID" name="teamID">
+<?php
+$teamsList = selectTeamsForInput();
+include "view-teams-input-list.php";
+?>
           </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Add</button>
