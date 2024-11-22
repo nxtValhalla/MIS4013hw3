@@ -1,4 +1,4 @@
-<div class="row mb-3 sticky-header">
+<div class="row mb-3">
   <div class="col">
 <h1>NBA Teams</h1>
   </div>
