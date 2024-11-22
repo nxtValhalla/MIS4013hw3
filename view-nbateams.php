@@ -6,6 +6,9 @@ include "header.php";
   <div class="col">
 <h1>NBA Teams</h1>
   </div>
+  <div>
+    <button onclick="scrollToTop()">Scroll to Top<i class="bi bi-arrow-bar-up"></i></button>
+  </div>
   <div class="col-auto d-flex align-items-center">
 <?php
 include "view-nbateams-addform.php";
