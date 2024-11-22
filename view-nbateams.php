@@ -1,12 +1,12 @@
 <div class="container sticky-header">
-  <div class="row ms-3 d-flex align-items-center">
-    <div class="col text-center">
+  <div class="row mb-3 d-flex align-items-center">
+    <div class="col d-flex justify-content-start align-items-center">
       <h1>NBA Teams</h1>
     </div>
-    <div class="col-auto d-flex justify-content-center align-items-center">
+    <div class="col d-flex justify-content-center align-items-center">
       <button onclick="scrollToTop()">Scroll to Top <i class="bi bi-arrow-bar-up"></i></button>
     </div>
-    <div class="col-auto d-flex align-items-center">
+    <div class="col d-flex justify-content-end align-items-center">
       <?php include "view-nbateams-addform.php"; ?>
       <h2 class="ms-3">Add a New Team</h2>
     </div>
