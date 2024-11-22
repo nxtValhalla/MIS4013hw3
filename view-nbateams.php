@@ -4,7 +4,7 @@
       <h1>NBA Teams</h1>
     </div>
     <div class="col d-flex justify-content-center align-items-center">
-      <button onclick="scrollToTop()">Scroll to Top <i class="bi bi-arrow-bar-up"></i></button>
+      <button onclick="scrollToTop()"><i class="bi bi-arrow-bar-up"></i>Scroll to Top</button>
       <script>
         function scrollToTop() 
         {
