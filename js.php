@@ -16,7 +16,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   </head>
   <body>
+    <div class="container text-center mt-4">
+      <h1>Current NBA Teams</h1>
+
+      <img id="imgNBA" src="NBATeams.png" style="height:200px; width:auto;"/>
     
+  </br>
+
+      
+      <div class="btn-group" role="group">
+        <button id="addbtn" class="btn btn-primary">Left</button>
+        <button id="minusbtn" class="btn btn-primary">Middle</button>
+        <button id="rotatebtn" class="btn btn-primary">Right</button>
+      </div>
+      
+    </div>
   </body>
 </html>
 
