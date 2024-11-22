@@ -1,12 +1,24 @@
-<div class="row mb-3">
-  <div class="col">
-<h1>NBA Players with Statistics</h1>
-  </div>
-  <div class="col-auto d-flex align-items-center">
 <?php
-include "view-players-with-stats-addform.php";
+include "bootstrap.php";
 ?>
-<h2 class="ms-3">Add a New Player Stat</h2>
+<div class="container sticky-header">
+  <div class="row mb-3 d-flex align-items-center">
+    <div class="col d-flex justify-content-start align-items-center">
+      <h1>NBA Players with Statistics</h1>
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+      <button type="button" class="btn btn-outline-success" onclick="scrollToTop()"><i class="bi bi-arrow-bar-up"></i> Scroll to Top <i class="bi bi-arrow-bar-up"></i></button>
+      <script>
+        function scrollToTop() 
+        {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      </script>
+    </div>
+    <div class="col d-flex justify-content-end align-items-center">
+      <?php include "view-players-with-stats-addform.php"; ?>
+      <h2 class="ms-3">Add a New Player Stat</h2>
+    </div>
   </div>
 </div>
 <div class="container">
