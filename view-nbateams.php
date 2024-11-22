@@ -1,5 +1,5 @@
 <div class="container sticky-header">
-  <div class="row ms-3 d-flex align-items-center justify-content-center">
+  <div class="row ms-3 d-flex align-items-center">
     <div class="col text-center">
       <h1>NBA Teams</h1>
     </div>
