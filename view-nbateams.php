@@ -1,12 +1,12 @@
-<div class="row">
+<div class="row mb-3 sticky-header">
   <div class="col">
 <h1>NBA Teams</h1>
   </div>
-  <div class="col-auto" style="display: flex; flex-direction: row; align-items: center;">
+  <div class="col-auto d-flex align-items-center">
 <?php
 include "view-nbateams-addform.php";
 ?>
-<h2>Add a New Team</h2>
+<h2 class="ms-3">Add a New Team</h2>
   </div>
 </div>
 <div class="table-responsive">
