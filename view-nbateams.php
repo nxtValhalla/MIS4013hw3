@@ -1,8 +1,8 @@
 <?php
-include "header.php";
+include "view-header.php";
 ?>
-<div class="container">
-  <div class="row mb-3 sticky-header d-flex align-items-center">
+<div class="container sticky-header">
+  <div class="row mb-3 d-flex align-items-center">
     <div class="col">
       <h1>NBA Teams</h1>
     </div>
