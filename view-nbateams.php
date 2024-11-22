@@ -1,4 +1,8 @@
-<div class="row mb-3">
+<?php
+include "header.php";
+?>
+
+<div class="row mb-3 sticky-header">
   <div class="col">
 <h1>NBA Teams</h1>
   </div>
