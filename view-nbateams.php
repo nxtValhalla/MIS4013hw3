@@ -1,9 +1,9 @@
 <div class="container sticky-header">
-  <div class="row mb-3 d-flex align-items-center">
-    <div class="col">
+  <div class="row mb-3 d-flex align-items-center justify-content-center">
+    <div class="col text-center">
       <h1>NBA Teams</h1>
     </div>
-    <div class="col-auto">
+    <div class="col-auto d-flex justify-content-center align-items-center">
       <button onclick="scrollToTop()">Scroll to Top <i class="bi bi-arrow-bar-up"></i></button>
     </div>
     <div class="col-auto d-flex align-items-center">
