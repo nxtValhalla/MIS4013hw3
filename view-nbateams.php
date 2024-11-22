@@ -1,6 +1,3 @@
-<?php
-include "view-header.php";
-?>
 <div class="container sticky-header">
   <div class="row mb-3 d-flex align-items-center">
     <div class="col">
