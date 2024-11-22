@@ -7,7 +7,7 @@ include "bootstrap.php";
       <h1>NBA Teams</h1>
     </div>
     <div class="col d-flex justify-content-center align-items-center">
-      <button onclick="scrollToTop()"><i class="bi bi-arrow-bar-up"></i>Scroll to Top</button>
+      <button type="button" class="btn btn-outline-success" onclick="scrollToTop()"><i class="bi bi-arrow-bar-up"></i>Scroll to Top</button>
       <script>
         function scrollToTop() 
         {
