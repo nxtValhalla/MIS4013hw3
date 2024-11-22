@@ -1,19 +1,18 @@
 <?php
 include "header.php";
 ?>
-
-<div class="row mb-3 sticky-header">
-  <div class="col">
-<h1>NBA Teams</h1>
-  </div>
-  <div>
-    <button onclick="scrollToTop()">Scroll to Top<i class="bi bi-arrow-bar-up"></i></button>
-  </div>
-  <div class="col-auto d-flex align-items-center">
-<?php
-include "view-nbateams-addform.php";
-?>
-<h2 class="ms-3">Add a New Team</h2>
+<div class="container">
+  <div class="row mb-3 sticky-header d-flex align-items-center">
+    <div class="col">
+      <h1>NBA Teams</h1>
+    </div>
+    <div class="col-auto">
+      <button onclick="scrollToTop()">Scroll to Top <i class="bi bi-arrow-bar-up"></i></button>
+    </div>
+    <div class="col-auto d-flex align-items-center">
+      <?php include "view-nbateams-addform.php"; ?>
+      <h2 class="ms-3">Add a New Team</h2>
+    </div>
   </div>
 </div>
 <div class="table-responsive">
