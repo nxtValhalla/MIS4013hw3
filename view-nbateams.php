@@ -1,3 +1,6 @@
+<?php
+include "bootstrap.php";
+?>
 <div class="container sticky-header">
   <div class="row mb-3 d-flex align-items-center">
     <div class="col d-flex justify-content-start align-items-center">
