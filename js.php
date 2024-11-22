@@ -24,11 +24,12 @@
   </br>
 
       
-      <div class="btn-group" role="group">
-        <button id="addbtn" class="btn btn-primary">Left</button>
-        <button id="minusbtn" class="btn btn-primary">Middle</button>
-        <button id="rotatebtn" class="btn btn-primary">Right</button>
-      </div>
+      <script>
+        function scrollToTop() 
+        {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      </script>
       
     </div>
   </body>
