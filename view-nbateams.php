@@ -5,6 +5,12 @@
     </div>
     <div class="col d-flex justify-content-center align-items-center">
       <button onclick="scrollToTop()">Scroll to Top <i class="bi bi-arrow-bar-up"></i></button>
+      <script>
+        function scrollToTop() 
+        {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      </script>
     </div>
     <div class="col d-flex justify-content-end align-items-center">
       <?php include "view-nbateams-addform.php"; ?>
