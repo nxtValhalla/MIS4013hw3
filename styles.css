@@ -15,38 +15,33 @@ body
     text-align: center;
     padding: 20px;
 }
-.countdown-container 
-{
-    margin: 50px auto;
-    padding: 20px;
-    max-width: 500px;
-    border: 2px solid white;
-    border-radius: 15px;
-    background: linear-gradient(145deg, #333333, #1a1a1a);
-    box-shadow: 5px 5px 15px #0f0f0f, -5px -5px 15px #262626;
+.countdown-container {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 700px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #333333, #1a1a1a);
+  box-shadow: 5px 5px 15px #0f0f0f, -5px -5px 15px #262626;
+  color: white;
 }
-.time-box 
-{
-    display: inline-block;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 10px;
-    background: #222;
-    box-shadow: 2px 2px 5px #0a0a0a, -2px -2px 5px #2e2e2e;
+
+.countdown-title {
+  font-size: 2rem;
+  font-weight: bold;
 }
-.time-box h1 
-{
-    margin: 0;
-    font-size: 3rem;
+
+.table {
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.time-box span 
-{
-    font-size: 1.2rem;
-    color: #888;
+
+thead th {
+  font-size: 1.5rem;
 }
-.countdown-title 
-{
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
+
+tbody td {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
