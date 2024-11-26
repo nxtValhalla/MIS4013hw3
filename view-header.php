@@ -33,7 +33,7 @@
           <a class="nav-link" href="players-with-stats.php">2023-2024 Player Stats</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"><button id="darkModeToggle" class="btn btn-outline-light me-2"><i class="bi bi-moon"></i>Dark Mode</button></a>
+          <a class="nav-link"><button id="darkModeToggle" class="btn btn-outline-primary me-2"><i class="bi bi-moon"></i>Dark Mode</button></a>
         </li>
       </ul>
     </div>
