@@ -3,7 +3,6 @@ include "bootstrap.php";
 include "js.php";
 ?>
 <div class="countdown-container">
-  <div class="countdown-title mb-4">Countdown to NBA Finals</div>
   <table class="table table-dark table-bordered table-striped text-center">
     <thead>
       <tr>
