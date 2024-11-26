@@ -46,3 +46,14 @@
   startCountdown("June 5, 2025 18:00:00 GMT-0500");
 </script>
 
+<script>
+document.getElementById("darkModeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  const toggleButton = document.getElementById("darkModeToggle");
+  const isDarkMode = document.body.classList.contains("dark-mode");
+  
+  toggleButton.innerHTML = isDarkMode
+    ? '<i class="bi bi-sun"></i> Light Mode'
+    : '<i class="bi bi-moon"></i> Dark Mode';
+});
+</script>
