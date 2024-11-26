@@ -1,4 +1,8 @@
-<style>
+<?php
+include view-header.php
+include bootstrap.php
+include js.php
+?>
 <div class="countdown-container">
   <div class="countdown-title">Countdown to NBA Finals</div>
   <div id="countdown">
@@ -20,7 +24,6 @@
     </div>
   </div>
 </div>
-
   <script>
     function startCountdown(targetDate) {
       const countdownElement = document.getElementById("countdown");
@@ -55,5 +58,6 @@
     startCountdown("June 5, 2025 18:00:00 GMT-0500");
   </script>
 
-</body>
-</html>
+<?php
+include footer.php
+?>
