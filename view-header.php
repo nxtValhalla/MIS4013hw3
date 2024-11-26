@@ -35,7 +35,7 @@
       </ul>
       <!-- Dark Mode Toggle Button -->
       <div class="d-flex align-items-center">
-        <button id="darkModeToggle" class="btn btn-outline-light me-2">
+        <button id="darkModeToggle" class="btn btn-outline-primary me-2">
           <i class="bi bi-moon"></i> Dark Mode
         </button>
       </div>
