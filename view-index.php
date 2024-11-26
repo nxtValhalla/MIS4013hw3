@@ -21,3 +21,6 @@ include "bootstrap.php";
     </tbody>
   </table>
 </div>
+<?php
+include "js.php";
+?>
