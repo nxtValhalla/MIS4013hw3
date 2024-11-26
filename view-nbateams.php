@@ -1,5 +1,6 @@
 <?php
 include "bootstrap.php";
+include "js.php";
 ?>
 <div class="container sticky-header">
   <div class="row mb-3 d-flex align-items-center">
@@ -8,12 +9,6 @@ include "bootstrap.php";
     </div>
     <div class="col d-flex justify-content-center align-items-center">
       <button type="button" class="btn btn-outline-success" onclick="scrollToTop()"><i class="bi bi-arrow-bar-up"></i> Scroll to Top <i class="bi bi-arrow-bar-up"></i></button>
-      <script>
-        function scrollToTop() 
-        {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      </script>
     </div>
     <div class="col d-flex justify-content-end align-items-center">
       <?php include "view-nbateams-addform.php"; ?>
