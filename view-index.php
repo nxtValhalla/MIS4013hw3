@@ -1,5 +1,4 @@
 <?php
-include "view-header.php";
 include "bootstrap.php";
 include "js.php";
 ?>
