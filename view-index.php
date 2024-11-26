@@ -1,6 +1,5 @@
 <?php
 include "bootstrap.php";
-include "js.php";
 ?>
 <div class="countdown-container">
   <table class="table table-dark table-bordered table-striped text-center">
