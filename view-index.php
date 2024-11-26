@@ -57,7 +57,3 @@ include js.php
     // Set the target date and time (adjusting for CST)
     startCountdown("June 5, 2025 18:00:00 GMT-0500");
   </script>
-
-<?php
-include footer.php
-?>
