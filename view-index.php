@@ -1,7 +1,7 @@
 <?php
-include view-header.php
-include bootstrap.php
-include js.php
+include "view-header.php";
+include "bootstrap.php";
+include "js.php";
 ?>
 <div class="countdown-container">
   <div class="countdown-title">Countdown to NBA Finals</div>
