@@ -8,5 +8,6 @@ include "view-header.php"
     </h1>
 <?php
 include "view-index.php";
+include "js.php";
 include "view-footer.php";
 ?>
