@@ -7,6 +7,43 @@
     padding: 10px 0; /* Optional: adjust padding for aesthetics */
     border-bottom: 1px solid #ddd; /* Optional: adds a bottom border for emphasis */
 }
+#darkModeToggle {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#darkModeToggle:hover {
+  background-color: #555;
+  color: #fff;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+  background-color: #222;
+}
+
+body.dark-mode .countdown-container {
+  background: linear-gradient(145deg, #333, #1a1a1a);
+  border-color: #444;
+}
+
+body.dark-mode .time-box {
+  background: #222;
+  box-shadow: 2px 2px 5px #0a0a0a, -2px -2px 5px #2e2e2e;
+}
+
+body.dark-mode a {
+  color: #ffa726;
+}
+
+body.dark-mode a:hover {
+  color: #ffcc80;
+}
 body 
 {
     background-color: #121212;
