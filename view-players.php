@@ -1,12 +1,19 @@
-<div class="row">
-  <div class="col">
-<h1>NBA Players</h1>
-  </div>
-  <div class="col-auto" style="display: flex; flex-direction: row; align-items: center;">
 <?php
-include "view-players-addform.php";
+include "bootstrap.php";
+include "js-scroll-to-top.php";
 ?>
-<h2>Add a New Player</h2>
+<div class="container sticky-header">
+  <div class="row mb-3 d-flex align-items-center">
+    <div class="col d-flex justify-content-start align-items-center">
+      <h1>NBA Players</h1>
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+      <button type="button" class="btn btn-outline-success" onclick="scrollToTop()"><i class="bi bi-arrow-bar-up"></i> Scroll to Top <i class="bi bi-arrow-bar-up"></i></button>
+    </div>
+    <div class="col d-flex justify-content-end align-items-center">
+      <?php include "view-players-addform.php"; ?>
+      <h2 class="ms-3">Add a New Player</h2>
+    </div>
   </div>
 </div>
 <div class="table-responsive">
