@@ -10,20 +10,25 @@
     const image = document.querySelector("#NBATeamsimg");
 
     document.querySelector("#addSize").addEventListener("click", () => {
-        let img = document.querySelector("#NBATemasimg");
+        let img = document.querySelector("#NBATeamsimg");
+        let currentHeight = img.clientHeight;
         let currentWidth = img.clientWidth;
-        img.style.width = (currentWidth + 15) + 'px';
+        img.style.height = (currentHeight + 10) + 'px';
+        img.style.width = (currentWidth + 10) + 'px';
     });
 
     document.querySelector("#minusSize").addEventListener("click", () => {
-       let img = document.querySelector("#NBATemasimg");
+       let img = document.querySelector("#NBATeamsimg");
+       let currentHeight = img.clientHeight; 
        let currentWidth = img.clientWidth;
-       if (currentWidth > 15) {
-       img.style.width = (currentWidth - 15) + 'px'; }
+       if (currentHeight > 10) {
+       img.style.height = (currentHeight - 10) + 'px';    
+       img.style.width = (currentWidth - 10) + 'px'; }
     });
 
     document.querySelector("#resetSize").addEventListener("click", () => {
-        let img = document.querySelector("#NBATemasimg");
-        img.style.width = '400px';
+        let img = document.querySelector("#NBATeamsimg");
+        img.style.height = '400px';
+        img.style.width = 'auto';
     });
 </script>
