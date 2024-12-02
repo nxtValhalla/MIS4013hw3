@@ -26,7 +26,7 @@
       <button id="resetSize" class="btn btn-warning"><i class="bi bi-arrow-counterclockwise"></i></button>
     </div>
     <div>
-      <img id="NBATeamsimg" src="NBATeams.png" style="height:400px; width:auto;"/>
+      <img id="NBATeamsimg" src="NBATeams.png" style="height:600px; width:auto;"/>
     </div>
 </div>
 <?php
