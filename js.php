@@ -48,12 +48,17 @@
 
 <script>
 document.getElementById("darkModeToggle").addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+  const body = document.body;
   const toggleButton = document.getElementById("darkModeToggle");
-  const isDarkMode = document.body.classList.contains("dark-mode");
   
-  toggleButton.innerHTML = isDarkMode
-    ? '<i class="bi bi-sun"></i> Light Mode'
-    : '<i class="bi bi-moon"></i> Dark Mode';
+  // Toggle the dark mode class
+  body.classList.toggle("dark-mode");
+  
+  // Update button text and icon
+  if (body.classList.contains("dark-mode")) {
+    toggleButton.innerHTML = '<i class="bi bi-sun"></i> Light Mode';
+  } else {
+    toggleButton.innerHTML = '<i class="bi bi-moon"></i> Dark Mode';
+  }
 });
 </script>
