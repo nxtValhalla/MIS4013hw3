@@ -25,10 +25,8 @@
       <button id="minusSize" class="btn btn-danger"><i class="bi bi-dash-square"></i></button>
       <button id="resetSize" class="btn btn-warning"><i class="bi bi-arrow-counterclockwise"></i></button>
     </div>
-  </br>
-    <div>
+    </br>
       <img id="NBATeamsimg" src="NBATeams.png" style="height:400px; width:auto;"/>
-    </div>
 </div>
 <?php
 include "js-finals-countdown.php";
