@@ -21,7 +21,7 @@
 <div class="container text-center mt-4">
     <h1>Image Manipulation with Buttons!</h1>
     
-    <img id="NBATeamsimg" src="NBATeams.png" style="height:200px; width:auto;"/>
+    <img id="NBATeamsimg" src="NBATeams.png" style="height:400px; width:auto;"/>
 </br>
     <div class="btn-group mt-3" role="group">
         <button id="addSize" class="btn btn-primary"><i class="bi bi-plus-square"></i></button>
