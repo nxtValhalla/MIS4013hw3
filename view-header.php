@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?=$pageTitle?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -35,8 +35,8 @@
       </ul>
       <!-- Dark Mode Toggle Button -->
       <div class="d-flex align-items-center">
-        <button id="darkModeToggle" me-2">
-          <i class="bi bi-moon"></i> Dark Mode
+        <button id="darkModeToggle" class="btn" me-2">
+          <i id="toggleDark" class="bi bi-moon"></i> Dark Mode
         </button>
       </div>
     </div>
