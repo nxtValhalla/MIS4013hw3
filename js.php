@@ -56,7 +56,7 @@ document.getElementById("darkModeToggle").addEventListener("click", () => {
   
   // Update button text and icon
   if (body.classList.contains("dark-mode")) {
-    toggleButton.innerHTML = '<i class="bi bi-sun"></i> Light Mode';
+    toggleButton.innerHTML = '<i id="toggleLight" class="bi bi-sun"></i> Light Mode';
   } else {
     toggleButton.innerHTML = '<i id="toggleDark" class="bi bi-moon"></i> Dark Mode';
   }
