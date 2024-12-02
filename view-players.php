@@ -1,6 +1,6 @@
 <?php
 include "bootstrap.php";
-include "js.php";
+include "js-scroll-to-top.php";
 ?>
 <div class="container sticky-header">
   <div class="row mb-3 d-flex align-items-center">
