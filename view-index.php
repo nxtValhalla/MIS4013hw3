@@ -1,4 +1,4 @@
-<div class="col d-flex justify-content-start align-items-center" style="background-color: #999898;">
+<div style="background-color: #999898; display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <div class="countdown-container">
     <table class="table table-dark table-bordered table-striped text-center">
       <thead>
