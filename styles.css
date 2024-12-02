@@ -8,7 +8,7 @@
     border-bottom: 1px solid #ddd; /* Optional: adds a bottom border for emphasis */
 }
 #darkModeToggle {
-  background-color: transparent;
+  background-color: #ddd;
   border: 1px solid #ddd;
   color: white;
   transition: background-color 0.3s, color 0.3s;
