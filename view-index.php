@@ -22,6 +22,6 @@ include "bootstrap.php";
   </table>
 </div>
 <?php
-include "js.php";
+include "js-scroll-to-top.php";
 include "js-finals-countdown.php";
 ?>
