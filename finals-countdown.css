@@ -1,0 +1,36 @@
+.nba-countdown-header {
+  font-family: 'Arial', sans-serif;
+  font-size: 3rem; /* Base font size for large screens */
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff6f61, #ffa726);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.nba-countdown-header small {
+  display: block;
+  font-size: 1.2rem; /* Smaller size for subtext */
+  font-weight: normal;
+  color: #ddd;
+  text-transform: none;
+  margin-top: 10px;
+}
+.countdown-container {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 700px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #333333, #1a1a1a);
+  box-shadow: 5px 5px 15px #0f0f0f, -5px -5px 15px #262626;
+  color: white;
+}
+.countdown-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
