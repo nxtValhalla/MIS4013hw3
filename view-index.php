@@ -20,13 +20,14 @@
 </div>
 <div class="container text-center mt-4">
     <h1>Image Manipulation with Buttons!</h1>
-    
-    <img id="NBATeamsimg" src="NBATeams.png" style="height:400px; width:auto;"/>
-</br>
     <div class="btn-group mt-3" role="group">
-        <button id="addSize" class="btn btn-primary"><i class="bi bi-plus-square"></i></button>
-        <button id="minusSize" class="btn btn-danger"><i class="bi bi-dash-square"></i></button>
-        <button id="resetSize" class="btn btn-warning"><i class="bi bi-arrow-counterclockwise"></i></button>
+      <button id="addSize" class="btn btn-primary"><i class="bi bi-plus-square"></i></button>
+      <button id="minusSize" class="btn btn-danger"><i class="bi bi-dash-square"></i></button>
+      <button id="resetSize" class="btn btn-warning"><i class="bi bi-arrow-counterclockwise"></i></button>
+    </div>
+  </br>
+    <div>
+      <img id="NBATeamsimg" src="NBATeams.png" style="height:400px; width:auto;"/>
     </div>
 </div>
 <?php
