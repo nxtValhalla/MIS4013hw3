@@ -8,15 +8,15 @@
     border-bottom: 1px solid #ddd; /* Optional: adds a bottom border for emphasis */
 }
 #darkModeToggle {
-  background-color: #ddd;
+  background-color: #555; /* Darker background for better contrast */
   border: 1px solid #ddd;
-  color: white;
+  color: #fff; /* Keep text white for visibility */
   transition: background-color 0.3s, color 0.3s;
 }
 
 #darkModeToggle:hover {
-  background-color: #555;
-  color: #fff;
+  background-color: #333; /* Slightly darker for hover effect */
+  color: #ffa726; /* Light orange for hover text color */
 }
 body.dark-mode {
   background-color: #121212;
