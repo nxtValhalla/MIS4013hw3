@@ -58,7 +58,7 @@ document.getElementById("darkModeToggle").addEventListener("click", () => {
   if (body.classList.contains("dark-mode")) {
     toggleButton.innerHTML = '<i class="bi bi-sun"></i> Light Mode';
   } else {
-    toggleButton.innerHTML = '<i class="bi bi-moon"></i> Dark Mode';
+    toggleButton.innerHTML = '<i id="toggleDark" class="bi bi-moon"></i> Dark Mode';
   }
 });
 </script>
