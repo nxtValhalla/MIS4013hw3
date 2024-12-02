@@ -1,4 +1,8 @@
 <div style="background-color: #999898; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <h1 class="nba-countdown-header">
+    NBA Finals Countdown <br />
+    <small>June 5th, 2025 at 7:30 PM CST</small>
+  </h1>
   <div class="countdown-container">
     <table class="table table-dark table-bordered table-striped text-center">
       <thead>
