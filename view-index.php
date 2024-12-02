@@ -31,7 +31,7 @@
         <button id="resetSize" class="btn btn-warning"><i class="bi bi-arrow-counterclockwise"></i></button>
       </div>
       <div>
-        <img id="NBATeamsimg" src="NBATeams.png" style="height:500px; width:auto;"/>
+        <img id="NBATeamsimg" src="img/NBATeams.png" style="height:500px; width:auto;"/>
       </div>
   </div>
 </div>
