@@ -36,7 +36,6 @@
       <!-- Dark Mode Toggle Button -->
       <div class="d-flex align-items-center">
         <button id="darkModeToggle" class="btn" me-2">
-          <i id="toggleDark" class="bi bi-moon"></i> Dark Mode
         </button>
       </div>
     </div>
