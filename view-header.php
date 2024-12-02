@@ -33,11 +33,6 @@
           <a class="nav-link" href="players-with-stats.php">2023-2024 Player Stats</a>
         </li>
       </ul>
-      <!-- Dark Mode Toggle Button -->
-      <div class="d-flex align-items-center">
-        <button id="darkModeToggle" class="btn" me-2">
-        </button>
-      </div>
     </div>
   </div>
 </nav>
