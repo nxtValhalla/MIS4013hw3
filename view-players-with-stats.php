@@ -1,5 +1,4 @@
 <?php
-include "bootstrap.php";
 include "js-scroll-to-top.php";
 ?>
 <div class="container sticky-header">
