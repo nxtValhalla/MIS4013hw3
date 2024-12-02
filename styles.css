@@ -10,7 +10,7 @@
 #darkModeToggle {
   background-color: transparent;
   border: 1px solid #ddd;
-  color: white;
+  color: #D31010;
   transition: background-color 0.3s, color 0.3s;
 }
 
