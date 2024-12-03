@@ -35,3 +35,7 @@
       </div>
   </div>
 </div>
+<?php
+include "js-finals-countdown.php";
+include "js-image-manipulation.php";
+?>
