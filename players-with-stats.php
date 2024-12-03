@@ -32,6 +32,7 @@ if (isset($_POST['actionType'])) {
 }
 
 $players = selectPlayers();
+include "js-scroll-to-top.php";
 include "view-players-with-stats.php";
 include "view-footer.php";
 ?>
