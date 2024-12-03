@@ -15,12 +15,12 @@
         echo json_encode($teams);
     ?>;
 
-    // Extract data for the chart
+    // Extract data
     const teamNames = teamData.map(team => team.TeamName);
     const wins = teamData.map(team => team.Wins);
     const losses = teamData.map(team => team.Losses);
 
-    // Create the chart
+    // Chart
     const ctx = document.getElementById('teamPerformanceChart').getContext('2d');
     const chart = new Chart(ctx, {
         type: 'bar',
