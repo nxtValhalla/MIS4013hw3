@@ -42,10 +42,24 @@
     // Convert PHP data to JavaScript
     const playerData = <?php echo json_encode($players); ?>;
 
-    // Extract stats for a given player
+    // Calculate max values for each stat
+    const maxValues = {
+        Points: Math.max(...playerData.map(player => player.Points)),
+        Rebounds: Math.max(...playerData.map(player => player.Rebounds)),
+        Assists: Math.max(...playerData.map(player => player.Assists)),
+    };
+
+    // Function to normalize player stats
     function getPlayerStats(playerName) {
         const player = playerData.find(p => p.PlayerName === playerName);
-        return player ? [player.Points, player.Rebounds, player.Assists] : [0, 0, 0];
+        if (player) {
+            return [
+                player.Points / maxValues.Points,
+                player.Rebounds / maxValues.Rebounds,
+                player.Assists / maxValues.Assists
+            ];
+        }
+        return [0, 0, 0];
     }
 
     // Initialize chart
@@ -58,14 +72,43 @@
         },
         options: {
             responsive: true,
+            maintainAspectRatio: true,
             plugins: {
-                legend: { position: 'top' },
-                title: { display: true, text: 'Player Stats Comparison' }
+                legend: {
+                    position: 'top',
+                    labels: {
+                        boxWidth: 20,
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Player Stats Comparison',
+                    font: {
+                        size: 16
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    min: 0,
+                    max: 1, // Normalize data to a scale of 0 to 1
+                    ticks: {
+                        stepSize: 0.2,
+                        callback: function(value) {
+                            return value * 100 + '%'; // Show percentage values
+                        }
+                    },
+                    pointLabels: {
+                        font: {
+                            size: 14
+                        }
+                    }
+                }
             }
         }
     });
 
-    // Function to update chart based on selected players
+    // Function to update the chart dynamically
     function updateChart(player1, player2) {
         radarChart.data.datasets = [];
         if (player1) {
