@@ -51,7 +51,7 @@
                 },
                 title: {
                     display: true,
-                    text: 'Team Performance'
+                    text: 'Team Performance - Sorted by Wins'
                 }
             }
         }
