@@ -16,7 +16,6 @@
 
     // Extract data for the chart
     const playerNames = playerData.map(player => player.PlayerName);
-    const gamesPlayed = playerData.map(player => player.GamesPlayed)
     const points = playerData.map(player => player.Points);
     const rebounds = playerData.map(player => player.Rebounds);
     const assists = playerData.map(player => player.Assists);
@@ -26,10 +25,10 @@
     const radarChart = new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: ['Games Played', 'Points', 'Rebounds', 'Assists'],
+            labels: ['Points', 'Rebounds', 'Assists'],
             datasets: playerNames.map((name, i) => ({
                 label: name,
-                data: [gamesPlayed[i], points[i], rebounds[i], assists[i]],
+                data: [points[i], rebounds[i], assists[i]],
                 fill: true,
                 backgroundColor: `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.2)`,
                 borderColor: `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 1)`,
