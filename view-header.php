@@ -32,6 +32,9 @@
         <li class="nav-item">
           <a class="nav-link" href="players-with-stats.php">2023-2024 Player Stats</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="team-performance.php">Team Performance</a>
+        </li>
       </ul>
     </div>
   </div>
