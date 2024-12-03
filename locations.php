@@ -32,6 +32,7 @@ if (isset($_POST['actionType'])) {
 }
 
 $locations = selectLocations();
+include "js-scroll-to-top.php";
 include "view-locations.php";
 include "view-footer.php";
 ?>
