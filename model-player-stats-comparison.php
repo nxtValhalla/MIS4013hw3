@@ -4,7 +4,6 @@ function getPlayerStatsComparison() {
         $conn = get_db_connection();
         $stmt = $conn->prepare("
             SELECT p.PlayerName, 
-              SUM(CASE WHEN s.StatName = 'GamesPlayed' THEN s.StatValue ELSE 0 END) AS GamesPlayed,
               SUM(CASE WHEN s.StatName = 'PPG' THEN s.StatValue ELSE 0 END) AS Points, 
               SUM(CASE WHEN s.StatName = 'RPG' THEN s.StatValue ELSE 0 END) AS Rebounds, 
               SUM(CASE WHEN s.StatName = 'APG' THEN s.StatValue ELSE 0 END) AS Assists
