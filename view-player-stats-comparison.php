@@ -32,7 +32,7 @@
 <style>
     #playerStatsChart {
         max-width: 1000px;
-        max-height: 1000px;
+        max-height: 750px;
         margin: 0 auto;
     }
 </style>
