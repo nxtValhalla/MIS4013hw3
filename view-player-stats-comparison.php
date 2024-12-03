@@ -49,20 +49,12 @@
         Assists: Math.max(...playerData.map(player => player.Assists)),
     };
 
-    // Function to normalize player stats
+    // Fetch raw player stats
     function getPlayerStats(playerName) {
         const player = playerData.find(p => p.PlayerName === playerName);
-        if (player) {
-            return [
-                player.Points / maxValues.Points,
-                player.Rebounds / maxValues.Rebounds,
-                player.Assists / maxValues.Assists
-            ];
-        }
-        return [0, 0, 0];
+        return player ? [player.Points, player.Rebounds, player.Assists] : [0, 0, 0];
     }
 
-    // Initialize chart
     const ctx = document.getElementById('playerStatsChart').getContext('2d');
     const radarChart = new Chart(ctx, {
         type: 'radar',
@@ -91,16 +83,20 @@
             scales: {
                 r: {
                     min: 0,
-                    max: 1, // Normalize data to a scale of 0 to 1
                     ticks: {
-                        stepSize: 0.2,
+                        stepSize: 5, // Set the step size for the axes
                         callback: function(value) {
-                            return value * 100 + '%'; // Show percentage values
+                            return value; // Display raw values without normalization
                         }
                     },
                     pointLabels: {
                         font: {
                             size: 14
+                        },
+                        callback: function(label, index) {
+                            // Append max value to axis label
+                            const max = [maxValues.Points, maxValues.Rebounds, maxValues.Assists][index];
+                            return `${label} (Max: ${max})`;
                         }
                     }
                 }
@@ -108,7 +104,7 @@
         }
     });
 
-    // Function to update the chart dynamically
+    // Update chart on player selection
     function updateChart(player1, player2) {
         radarChart.data.datasets = [];
         if (player1) {
