@@ -32,6 +32,7 @@ if (isset($_POST['actionType'])) {
 }
 
 $nbateams = selectNBATeams();
+include "js-scroll-to-top.php";
 include "view-nbateams.php";
 include "view-footer.php";
 ?>
