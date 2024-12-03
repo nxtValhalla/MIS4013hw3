@@ -35,6 +35,9 @@
         <li class="nav-item">
           <a class="nav-link" href="team-performance.php">Team Performance</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="player-stats-comparison.php">Player Stats Comparison</a>
+        </li>
       </ul>
     </div>
   </div>
