@@ -29,6 +29,14 @@
         
 </div>
 
+<style>
+    #playerStatsChart {
+        max-width: 600px;
+        max-height: 400px;
+        margin: 0 auto;
+    }
+</style>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     // Convert PHP data to JavaScript
