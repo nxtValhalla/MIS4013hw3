@@ -38,6 +38,9 @@
         <li class="nav-item">
           <a class="nav-link" href="player-stats-comparison.php">Player Stats Comparison</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="team-wins-losses.php">Wins and Losses</a>
+        </li>
       </ul>
     </div>
   </div>
