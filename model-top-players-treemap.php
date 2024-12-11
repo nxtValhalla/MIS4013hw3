@@ -1,21 +1,15 @@
 <?php
-function getTopPlayersByStat($statName, $limit = 10) {
-    $validStats = ['PPG', 'RPG', 'APG']; // List of valid stat names
-    if (!in_array($statName, $validStats)) {
-        throw new Exception("Invalid stat name provided");
-    }
-
+function getPlayerStatsForTreemap($statName) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("
-            SELECT PlayerName, StatValue, StatName
-            FROM nbarosters.nba_northwest_player_stats s
-            JOIN nbarosters.nba_northwest_players p ON s.PlayerID = p.PlayerID
+            SELECT p.PlayerName, s.StatValue
+            FROM nbarosters.nba_northwest_players p
+            JOIN nbarosters.nba_northwest_player_stats s ON p.PlayerID = s.PlayerID
             WHERE s.StatName = ?
-            ORDER BY s.StatValue DESC
-            LIMIT ?;
+            ORDER BY s.StatValue DESC;
         ");
-        $stmt->bind_param("si", $statName, $limit);
+        $stmt->bind_param("s", $statName);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
