@@ -2,7 +2,7 @@
 require_once("util-db.php");
 require_once("model-top-players-treemap.php");
 
-$pageTitle = "Top Players by Stat Category";
+$pageTitle = "Top 10 Players by PPG";
 include "view-header.php";
 
 $defaultStat = "PPG";
