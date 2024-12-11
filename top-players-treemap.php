@@ -2,7 +2,7 @@
 require_once("util-db.php");
 require_once("model-top-players-treemap.php");
 
-$pageTitle = "Top Players by Stat";
+$pageTitle = "Top Players by Stat Category";
 include "view-header.php";
 
 $defaultStat = "PPG";
@@ -15,7 +15,7 @@ while ($row = $playerData->fetch_assoc()) {
     $players[] = $row;
 }
 
-$availableStats = ["PPG", "Rebounds", "Assists", "Steals", "Blocks"];
+$availableStats = ["PPG", "RPG", "APG"];
 
 include "view-top-players-treemap.php";
 include "view-footer.php";
