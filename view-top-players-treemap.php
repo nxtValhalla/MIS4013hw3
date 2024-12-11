@@ -1,79 +1,51 @@
 <div class="container mt-4">
     <h1>Top Players by Stat</h1>
-
     <!-- Dropdown to select the stat -->
     <div class="mb-4">
         <label for="statSelect" class="form-label">Select a Stat</label>
         <select id="statSelect" class="form-select">
-            <?php foreach ($statNames as $stat): ?>
+            <?php foreach ($availableStats as $stat): ?>
                 <option value="<?= $stat ?>" <?= $stat === $statName ? 'selected' : '' ?>>
                     <?= $stat ?>
                 </option>
             <?php endforeach; ?>
         </select>
     </div>
-
-    <!-- Treemap Chart -->
-    <canvas id="treemapChart" style="max-width: 800px; height: 400px;"></canvas>
+    <!-- TreeMap Chart -->
+    <div id="treemap"></div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
-    // Log raw PHP data for debugging
-    console.log("Raw PHP data:", <?php echo json_encode($data); ?>);
-
+    // Convert PHP data to JavaScript
+    const playerData = <?php echo json_encode($players); ?>;
     // Prepare data for TreeMap
-    const playerData = <?php echo json_encode($data); ?>;
     const treeMapData = playerData.map(player => ({
-        label: player.PlayerName,
-        value: parseFloat(player.StatValue) // Ensure StatValue is a float
+        x: player.PlayerName,
+        y: player.StatValue
     }));
-
-    // Debugging data passed to the TreeMap
-    console.log("TreeMap Data:", treeMapData);
-
     // Initialize the TreeMap chart
-    const ctx = document.getElementById('treemapChart').getContext('2d');
-    try {
-        const treemapChart = new Chart(ctx, {
+    const options = {
+        series: [{
+            data: treeMapData
+        }],
+        chart: {
             type: 'treemap',
-            data: {
-                datasets: [{
-                    tree: treeMapData,
-                    key: 'value',
-                    groups: ['label'],
-                    backgroundColor: (ctx) => {
-                        const value = ctx.raw.v;
-                        const max = Math.max(...treeMapData.map(item => item.value));
-                        const intensity = value / max;
-                        return `rgba(${Math.floor(255 * intensity)}, ${Math.floor(200 * (1 - intensity))}, 128, 0.8)`;
-                    },
-                    borderColor: 'rgba(0, 0, 0, 0.1)',
-                    borderWidth: 1,
-                }]
-            },
-            options: {
-                plugins: {
-                    legend: { display: false },
-                    title: {
-                        display: true,
-                        text: `Top Players by ${"<?php echo $statName; ?>"}`,
-                        font: { size: 18 }
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: (context) => {
-                                const label = context.raw.g;
-                                const value = context.raw.v;
-                                return `${label}: ${value}`;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    } catch (error) {
-        console.error("Error initializing TreeMap:", error);
-    }
+            height: 350
+        },
+        title: {
+            text: `Top Players by ${"<?= $statName ?>"}`,
+            align: 'center'
+        },
+        colors: ['#008FFB', '#00E396', '#FEB019', '#FF4560', '#775DD0'],
+        legend: {
+            show: false
+        }
+    };
+    const chart = new ApexCharts(document.querySelector("#treemap"), options);
+    chart.render();
+    // Handle stat selection change
+    document.getElementById('statSelect').addEventListener('change', function () {
+        const selectedStat = this.value;
+        window.location.href = `treemap-stat-chart.php?stat=${selectedStat}`;
+    });
 </script>
