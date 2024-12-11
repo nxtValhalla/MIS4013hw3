@@ -1,5 +1,5 @@
 <div class="container mt-4">
-    <h1>Team Performance - Wins and Losses</h1>
+    <h1>Team Performance Comparison</h1>
     <canvas id="teamPerformanceChart"></canvas>
 </div>
 
