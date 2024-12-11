@@ -2,26 +2,22 @@
 require_once("util-db.php");
 require_once("model-top-players-treemap.php");
 
-$pageTitle = "Top Players by Stat";
+$pageTitle = "Top Players by Stat Category";
 include "view-header.php";
 
-// Fetch all available stat names
-$statNames = getStatNames();
+$defaultStat = "PPG";
 
-// Determine the selected stat
-$defaultStat = $statNames[0]; // Default to the first stat if none is selected
-$statName = isset($_GET['stat']) && in_array($_GET['stat'], $statNames) ? $_GET['stat'] : $defaultStat;
+$statName = isset($_GET['stat']) ? $_GET['stat'] : $defaultStat;
 
-// Fetch top 10 players for the selected stat
-$playerStats = getTopPlayersByStat($statName);
+$playerData = getTopPlayersByStat($statName);
+$players = [];
 
-// Prepare data for the chart
-$data = [];
-while ($row = $playerStats->fetch_assoc()) {
-    $data[] = $row;
+while ($row = $playerData->fetch_assoc()) {
+    $players[] = $row;
 }
 
-// Include the view
+$availableStats = ["PPG", "RPG", "APG"];
+
 include "view-top-players-treemap.php";
 include "view-footer.php";
 ?>
