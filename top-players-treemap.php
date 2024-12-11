@@ -16,8 +16,6 @@ while ($row = $playerData->fetch_assoc()) {
     $players[] = $row;
 }
 
-$availableStats = ["PPG", "RPG", "APG"];
-
 include "view-top-players-treemap.php";
 include "view-footer.php";
 ?>
