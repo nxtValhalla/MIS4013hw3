@@ -13,7 +13,8 @@ $defaultStat = $availableStats[0]; // Use the first available stat as the defaul
 $statName = isset($_GET['stat']) && in_array($_GET['stat'], $availableStats) ? $_GET['stat'] : $defaultStat;
 
 // Fetch player data for the selected stat
-$playerStats = getPlayerStatsForTreemap($statName);
+$limit = 10;
+$playerStats = getPlayerStatsForTreemap($statName, $limit);
 
 // Convert data to an array for Chart.js
 $data = [];
