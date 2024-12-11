@@ -1,11 +1,11 @@
 <div class="container mt-4">
-    <h1>Player Stats Treemap</h1>
+    <h1>Top Players by Stat</h1>
 
     <!-- Dropdown to select the stat -->
     <div class="mb-4">
         <label for="statSelect" class="form-label">Select a Stat</label>
         <select id="statSelect" class="form-select">
-            <?php foreach ($availableStats as $stat): ?>
+            <?php foreach ($statNames as $stat): ?>
                 <option value="<?= $stat ?>" <?= $stat === $statName ? 'selected' : '' ?>>
                     <?= $stat ?>
                 </option>
@@ -55,7 +55,7 @@
                 },
                 title: {
                     display: true,
-                    text: `Player Stats - <?= $statName ?>`,
+                    text: `Top Players by ${"<?= $statName ?>"}`,
                     font: {
                         size: 18
                     }
@@ -76,6 +76,6 @@
     // Handle stat selection change
     document.getElementById('statSelect').addEventListener('change', function () {
         const selectedStat = this.value;
-        window.location.href = `treemap-chart.php?stat=${selectedStat}`;
+        window.location.href = `treemap-controller.php?stat=${selectedStat}`;
     });
 </script>
