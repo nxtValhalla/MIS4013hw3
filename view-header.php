@@ -41,6 +41,9 @@
         <li class="nav-item">
           <a class="nav-link" href="team-wins-losses.php">Wins and Losses</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="top-players-treemap.php">Top 10 Players by Stat</a>
+        </li>
       </ul>
     </div>
   </div>
