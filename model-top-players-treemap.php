@@ -19,4 +19,27 @@ function getPlayerStatsForTreemap($statName) {
         throw $e;
     }
 }
+
+function getAvailableStats() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("
+            SELECT DISTINCT StatName
+            FROM nbarosters.nba_northwest_player_stats
+            ORDER BY StatName ASC;
+        ");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+
+        $stats = [];
+        while ($row = $result->fetch_assoc()) {
+            $stats[] = $row['StatName'];
+        }
+        return $stats;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
