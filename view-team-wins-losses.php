@@ -22,8 +22,8 @@
 
 <style>
     #teamDoughnutChart {
-        max-width: 1000px;
-        max-height: 700px;
+        max-width: 1400px;
+        max-height: 1400px;
         margin: 0 auto;
     }
 </style>
