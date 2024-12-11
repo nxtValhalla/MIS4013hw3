@@ -55,7 +55,7 @@
                 },
                 title: {
                     display: true,
-                    text: `Player Stats - ${"<?= $statName ?>"}`,
+                    text: `Player Stats - <?= $statName ?>`,
                     font: {
                         size: 18
                     }
