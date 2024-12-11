@@ -1,5 +1,5 @@
 <?php
-function getPlayerStatsForTreemap($statName, $limit = 10) {
+function getPlayerStatsForTreemap($statName, $limit) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("
@@ -8,7 +8,7 @@ function getPlayerStatsForTreemap($statName, $limit = 10) {
             JOIN nbarosters.nba_northwest_player_stats s ON p.PlayerID = s.PlayerID
             WHERE s.StatName = ?
             ORDER BY s.StatValue DESC
-            LIMIT $limit;
+            LIMIT ?;
         ");
         $stmt->bind_param("s", $statName);
         $stmt->execute();
