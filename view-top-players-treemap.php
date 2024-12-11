@@ -1,6 +1,7 @@
 <div class="container mt-4">
-    <h1>Top Players by Stat</h1>
+    <h1>Player Stats Treemap</h1>
 
+    <!-- Dropdown to select the stat -->
     <div class="mb-4">
         <label for="statSelect" class="form-label">Select a Stat</label>
         <select id="statSelect" class="form-select">
@@ -12,63 +13,69 @@
         </select>
     </div>
 
-    <div id="treemap"></div>
+    <!-- Treemap Chart -->
+    <canvas id="treemapChart" style="max-width: 800px; height: 400px;"></canvas>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap"></script>
 <script>
+    // Convert PHP data to JavaScript
+    const playerData = <?php echo json_encode($data); ?>;
 
-    const playerData = <?php echo json_encode($players); ?>;
-
+    // Prepare data for TreeMap
     const treeMapData = playerData.map(player => ({
-        x: player.PlayerName,
-        y: player.StatValue
+        label: player.PlayerName,
+        value: player.StatValue
     }));
 
-    const minValue = Math.min(...treeMapData.map(player => player.y));
-    const maxValue = Math.max(...treeMapData.map(player => player.y));
-
-    const options = {
-        series: [{
-            data: treeMapData
-        }],
-        chart: {
-            type: 'treemap',
-            height: 350
+    // Initialize the TreeMap chart
+    const ctx = document.getElementById('treemapChart').getContext('2d');
+    const treemapChart = new Chart(ctx, {
+        type: 'treemap',
+        data: {
+            datasets: [{
+                tree: treeMapData,
+                key: 'value',
+                groups: ['label'],
+                backgroundColor: (ctx) => {
+                    const value = ctx.raw.v;
+                    const max = Math.max(...treeMapData.map(item => item.value));
+                    const intensity = value / max;
+                    return `rgba(${Math.floor(255 * intensity)}, ${Math.floor(200 * (1 - intensity))}, 128, 0.8)`;
+                },
+                borderColor: 'rgba(0, 0, 0, 0.1)',
+                borderWidth: 1,
+            }]
         },
-        title: {
-            text: `Top Players by ${"<?= $statName ?>"}`,
-            align: 'center'
-        },
-        colors: ['#008FFB'],
-        plotOptions: {
-            treemap: {
-                colorScale: {
-                    ranges: [
-                        {
-                            from: minValue,
-                            to: maxValue,
-                            color: function({ value }) {
-                                const intensity = (value - minValue) / (maxValue - minValue);
-                                const red = Math.floor(255 * intensity);
-                                const green = Math.floor(192 * (1 - intensity));
-                                return `rgb(${red}, ${green}, 128)`;
-                            }
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: `Player Stats - ${"<?= $statName ?>"}`,
+                    font: {
+                        size: 18
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: (context) => {
+                            const label = context.raw.g;
+                            const value = context.raw.v;
+                            return `${label}: ${value}`;
                         }
-                    ]
+                    }
                 }
             }
-        },
-        legend: {
-            show: false
         }
-    };
+    });
 
-    const chart = new ApexCharts(document.querySelector("#treemap"), options);
-    chart.render();
-
+    // Handle stat selection change
     document.getElementById('statSelect').addEventListener('change', function () {
         const selectedStat = this.value;
-        window.location.href = `treemap-stat-chart.php?stat=${selectedStat}`;
+        window.location.href = `treemap-chart.php?stat=${selectedStat}`;
     });
 </script>
