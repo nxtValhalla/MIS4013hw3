@@ -29,7 +29,7 @@ function getTopPlayersByStat($statName, $limit = 10) {
             SELECT p.PlayerName, s.StatValue
             FROM nbarosters.nba_northwest_players p
             JOIN nbarosters.nba_northwest_player_stats s ON p.PlayerID = s.PlayerID
-            WHERE s.StatName = ?
+            WHERE s.StatName = '?'
             ORDER BY s.StatValue DESC
             LIMIT ?;
         ");
