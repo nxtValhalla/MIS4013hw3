@@ -1,16 +1,5 @@
 <div class="container mt-4">
-    <h1>Top Players by Stat</h1>
-    <!-- Dropdown to select the stat -->
-    <div class="mb-4">
-        <label for="statSelect" class="form-label">Select a Stat</label>
-        <select id="statSelect" class="form-select">
-            <?php foreach ($availableStats as $stat): ?>
-                <option value="<?= $stat ?>" <?= $stat === $statName ? 'selected' : '' ?>>
-                    <?= $stat ?>
-                </option>
-            <?php endforeach; ?>
-        </select>
-    </div>
+    <h1>Top 10 Players by Points Per Game</h1>
     <!-- TreeMap Chart -->
     <div id="treemap"></div>
 </div>
@@ -30,7 +19,7 @@
         }],
         chart: {
             type: 'treemap',
-            height: 350
+            height: 500
         },
         title: {
             text: `Top Players by ${"<?= $statName ?>"}`,
