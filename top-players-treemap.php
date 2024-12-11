@@ -1,6 +1,6 @@
 <?php
 require_once("util-db.php");
-require_once("model-players-with-stats.php");
+require_once("model-top-players-treemap.php");
 
 $pageTitle = "Top Players by Stat";
 include "view-header.php";
@@ -18,6 +18,6 @@ while ($row = $playerData->fetch_assoc()) {
 
 $availableStats = ['PPG', 'RPG', 'APG'];
 
-include "view-treemap-stat-chart.php";
+include "view-top-players-treemap.php";
 include "view-footer.php";
 ?>
